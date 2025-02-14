@@ -14,7 +14,7 @@ public class IrregularPolygon {
     // public methods
     public void add(Point2D.Double aPoint)
     {
-        // TODO: Add a point to the IrregularPolygon.
+        Point2D.Double(2.5, 3.1) 
     }
 
     public double perimeter() {
