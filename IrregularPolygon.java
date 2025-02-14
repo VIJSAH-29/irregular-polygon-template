@@ -15,18 +15,15 @@ public class IrregularPolygon {
     public void add(Point2D.Double aPoint)
     {
         myPolygon.add(aPoint);
+        public double perimeter() {
+            double perimeter = 0.0;
+            for (int i = 0; i < myPolygon.size(); i++) {
+                Point2D.Double current = myPolygon.get(i);
+                Point2D.Double next = myPolygon.get((i + 1) % myPolygon.size());
     }
 
     public double perimeter() {
-        double perimeter = 0.0;
-        for (int i = 0; i < myPolygon.size(); i++) {
-            Point2D.Double current = myPolygon.get(i);
-            Point2D.Double next = myPolygon.get((i + 1) % myPolygon.size());
-            double distance = current.distance(next);
-            perimeter += distance;
         }
-        return perimeter;
-    }
         return 3.14;
     }
 
