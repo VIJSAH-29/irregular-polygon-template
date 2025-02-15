@@ -39,6 +39,11 @@ public class IrregularPolygon {
         sum2 += vertices.get(vertices.size() - 1).y * vertices.get(0).x;
 
         double polygonArea = 0.5 * Math.abs(sum1 - sum2);
+
+        // If the area is very close to 0 (self-intersecting shapes), return 0
+        if (polygonArea < 0.001) {
+            return 0.0;
+        }
         return polygonArea;
     }
 
